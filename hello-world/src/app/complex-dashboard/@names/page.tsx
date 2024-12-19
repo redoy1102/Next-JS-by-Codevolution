@@ -1,7 +1,7 @@
 const Names = () => {
     return (
         <div>
-            <h1 className="font-bold">Names route</h1>
+            <h1 className="font-bold">Names route as NavBar</h1>
         </div>
     );
 };
