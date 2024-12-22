@@ -34,3 +34,53 @@ let myName: string | number;
 myName = "Fuad"
 // myName = 10
 console.log(myName);
+
+function sum(number1:number, number2:number): number{
+    return number1 + number2
+}
+
+let sum_result:number = sum(10, 20)
+console.log(sum_result);
+
+// .............................................................................
+interface Person{
+    firstName: string,
+    middleName: string,
+    lastName: string,
+}
+
+function fullName(params: Person): string{
+    return params.firstName + ' ' + params.middleName + ' ' + params.lastName
+}
+
+let p = {
+        firstName: 'Fuad',
+        middleName: 'Islam',
+        lastName: 'Redoy'
+
+    }
+
+console.log(fullName(p));
+
+interface RegistrationForm{
+    firstName: string,
+    lastName: string,
+    age: number,
+    salary: number,
+}
+
+function getRegistrationFormValue(params: RegistrationForm){
+    console.log('First name: ', params.firstName);
+    console.log('Last name: ', params.lastName);
+    console.log('Age: ', params.age);
+    console.log('Salary: ', params.salary);
+}
+
+const RegistrationData = {
+    firstName: 'Fuad',
+    lastName: 'Redoy',
+    age: 24,
+    salary: 45000
+}
+
+getRegistrationFormValue(RegistrationData)
