@@ -18,6 +18,14 @@ var Color;
 var c = Color.Red;
 var green = Color.Green;
 // console.log(green);
+var Friends;
+(function (Friends) {
+    Friends[Friends["f1"] = 1] = "f1";
+    Friends[Friends["f2"] = 2] = "f2";
+    Friends[Friends["f3"] = 3] = "f3";
+})(Friends || (Friends = {}));
+var f = Friends.f2;
+console.log(f);
 var myVariable = 10;
 function hasName(obj) {
     return !!obj &&

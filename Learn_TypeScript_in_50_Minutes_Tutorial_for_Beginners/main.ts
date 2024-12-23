@@ -19,6 +19,10 @@ let c:Color = Color.Red
 let green: Color = Color.Green
 // console.log(green);
 
+enum Friends {f1 = 1, f2, f3}
+const f:Friends = Friends.f2
+console.log(f)
+
 let myVariable: unknown = 10
 function hasName(obj: any): obj is {name: string}{
     return !!obj && 
@@ -34,3 +38,5 @@ let myName: string | number;
 myName = "Fuad"
 // myName = 10
 console.log(myName);
+
+
