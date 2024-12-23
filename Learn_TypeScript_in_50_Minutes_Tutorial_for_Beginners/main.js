@@ -38,3 +38,30 @@ var myName;
 myName = "Fuad";
 // myName = 10
 console.log(myName);
+function sum(number1, number2) {
+    return number1 + number2;
+}
+var sum_result = sum(10, 20);
+console.log(sum_result);
+function fullName(params) {
+    return params.firstName + ' ' + params.middleName + ' ' + params.lastName;
+}
+var p = {
+    firstName: 'Fuad',
+    middleName: 'Islam',
+    lastName: 'Redoy'
+};
+console.log(fullName(p));
+function getRegistrationFormValue(params) {
+    console.log('First name: ', params.firstName);
+    console.log('Last name: ', params.lastName);
+    console.log('Age: ', params.age);
+    console.log('Salary: ', params.salary);
+}
+var RegistrationData = {
+    firstName: 'Fuad',
+    lastName: 'Redoy',
+    age: 24,
+    salary: 45000
+};
+getRegistrationFormValue(RegistrationData);
