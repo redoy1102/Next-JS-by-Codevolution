@@ -6,7 +6,7 @@ export async function GET()
 }
 
 export async function POST(request: Request){
-    // Getting the comment from the user post. We need convert the comment in json format as user post data always be converted into stringify.
+    // Getting the comment from the user post. We need to convert the comment in json format as user post data always be converted into stringify.
     const comment = await request.json();
 
     // Creating the new comment by the user's comment to add in the comments array
