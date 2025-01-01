@@ -18,8 +18,8 @@ export async function POST(request: Request){
 
     return new Response(JSON.stringify(newComment), {
         headers: {
-            "Content-Type": "application/json",
+            "content-type": "application/json",
         },
         status: 201,
-    });
+    })
 }
