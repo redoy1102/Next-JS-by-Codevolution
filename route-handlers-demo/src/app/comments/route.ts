@@ -1,25 +1,30 @@
+import { NextRequest } from "next/server";
 import {comments} from "./data";
 
-export async function GET()
+export async function GET(request: NextRequest)
 {
-    return Response.json(comments);
+    const searchParams = request.nextUrl.searchParams;
+    const query = searchParams.get("query")
+    const filteredComments = query
+        ? comments.filter(comment => comment.text.includes(query))
+        : comments
+
+    return Response.json(filteredComments);
 }
 
 export async function POST(request: Request){
-    // Getting the comment from the user post. We need to convert the comment in json format as user post data always be converted into stringify.
-    const comment = await request.json();
+    const comment = await request.json()
 
-    // Creating the new comment by the user's comment to add in the comments array
     const newComment = {
         id: comments.length + 1,
         text: comment.text,
-    };
-    comments.push(newComment);
+    }
+    comments.push(newComment)
 
     return new Response(JSON.stringify(newComment), {
         headers: {
             "content-type": "application/json",
         },
-        status: 201,
+        status: 201
     })
 }
