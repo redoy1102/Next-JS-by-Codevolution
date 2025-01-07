@@ -38,10 +38,6 @@ let myName: string | number;
 myName = "Fuad"
 // myName = 10
 console.log(myName);
-
-<<<<<<< HEAD
-
-=======
 function sum(number1:number, number2:number): number{
     return number1 + number2
 }
@@ -91,4 +87,3 @@ const RegistrationData = {
 }
 
 getRegistrationFormValue(RegistrationData)
->>>>>>> 59329797f89ba57dc17dca7ac76e658ea30546da
