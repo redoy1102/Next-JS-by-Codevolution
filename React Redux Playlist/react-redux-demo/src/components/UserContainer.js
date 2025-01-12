@@ -38,3 +38,8 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps) (UserContainer);
+
+// 1. Connect will be called first.
+// 2. Then the useEffect hook will be called as the empty dependency is here. 
+// 3. fetchUsers() of useEffect will be called
+// 4. dispatch(fetchUsers())

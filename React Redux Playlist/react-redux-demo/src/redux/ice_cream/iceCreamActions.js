@@ -9,8 +9,9 @@ export const buy_ice_cream = (number = 1) => {
     }
 }
 
-export const sell_ice_cream = () => {
+export const sell_ice_cream = (number = 1) => {
     return {
-        type: SELL_ICE_CREAM
+        type: SELL_ICE_CREAM,
+        payload: number
     }
 }
